@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Reviews</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+
+<header style="text-align:center;padding:40px;">
+<h1>Album Reviews</h1>
+<p>Browse every album I've reviewed so far!</p>
+</header>
+
+
+<section style="text-align:center;margin-bottom:30px;">
+
+<label for="sortReviews"><strong>Sort Reviews:</strong></label>
+
+<select id="sortReviews">
+
+<option value="reviewNewest">Review Date (Newest)</option>
+<option value="reviewOldest">Review Date (Oldest)</option>
+
+<option value="releaseNewest">Release Date (Newest)</option>
+<option value="releaseOldest">Release Date (Oldest)</option>
+
+<option value="tracks">Most Tracks</option>
+<option value="score">Highest Score</option>
+
+</select>
+
+</section>
+
+
+<!-- Review Cards -->
+
+<section id="reviewList" class="review-grid"></section>
+
+<script src="albums.js"></script>
+
+<script>
+
+const container = document.getElementById("reviewList");
+
+const params = new URLSearchParams(window.location.search);
+const genreFilter = params.get("genre");
+
+let filteredAlbums = [...albums];
+
+if(genreFilter){
+filteredAlbums = albums.filter(album =>
+album.genre.includes(genreFilter)
+);
+}
+
+function formatDate(date){
+
+const d = new Date(date);
+
+return d.toLocaleDateString("en-US",{
+year:"numeric",
+month:"short",
+day:"numeric"
+});
+
+}
+
+function renderAlbums(list){
+
+container.innerHTML = "";
+
+list.forEach(album=>{
+
+let card = document.createElement("div");
+
+card.className="review-card";
+
+card.dataset.review = album.reviewDate;
+card.dataset.release = album.releaseDate;
+card.dataset.tracks = album.tracks;
+card.dataset.score = album.score;
+
+card.innerHTML = `
+
+<a href="${album.link}">
+
+<img src="${album.cover}" class="review-thumb">
+
+<h3>${album.title}</h3>
+
+<p class="artist">${album.artist}</p>
+
+<p class="meta">
+⭐ ${album.score} |  ${album.tracks} Tracks
+<br>
+Released: ${formatDate(album.releaseDate)}
+<br>
+Reviewed: ${formatDate(album.reviewDate)}
+</p>
+
+</a>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+renderAlbums(filteredAlbums);
+
+
+
+document.getElementById("sortReviews").addEventListener("change",function(){
+
+let type=this.value;
+
+let sorted=[...filteredAlbums].sort((a,b)=>{
+
+if(type==="reviewNewest"){
+return new Date(b.reviewDate)-new Date(a.reviewDate);
+}
+
+if(type==="reviewOldest"){
+return new Date(a.reviewDate)-new Date(b.reviewDate);
+}
+
+if(type==="releaseNewest"){
+return new Date(b.releaseDate)-new Date(a.releaseDate);
+}
+
+if(type==="releaseOldest"){
+return new Date(a.releaseDate)-new Date(b.releaseDate);
+}
+
+if(type==="tracks"){
+return b.tracks-a.tracks;
+}
+
+if(type==="score"){
+return b.score-a.score;
+}
+
+});
+
+renderAlbums(sorted);
+
+});
+
+</script>
+
+<script src="search.js"></script>
+</body>
+</html>

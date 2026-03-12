@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album4.jpg" class="review-cover">
+
+<div class="review-grade">2.6 ★</div>
+
+</div>
+
+</section>
+<h1>The Romantic</h1>
+<p>by Bruno Mars</p>
+
+<section class="album-meta"
+     data-review-date="2026-02-27"
+     data-track-count="9"
+     data-album-score="2.6">
+
+<p><strong>Tracks:</strong> 9</p>
+<p><strong>Released:</strong> February 27, 2026</p>
+<p><strong>Reviewed:</strong> February 27, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+<span>Risk It All</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Cha Cha Cha</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>I Just Might</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>God Was Showing Off</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>Why You Wanna Fight?</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>On My Soul</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Something Serious</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Nothing Left</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Dance With Me</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+The factual worst Bruno Mars album to date. With many of the 9 tracks featuring Carribbean-esque drumlines in the background that give the impression they were sampled straight from an elevator created in the 80s, Bruno's voice is left to carry the tracks. Lucky for Mars, that is what he is best at, salvaging a fair number of these songs to make them just relevant enough to tolerate listening. This album has a vast void of non-playlist tracks, which is very noncharacteristic of Mars and I, along with millions of other fans were left dissapointed with this February 27th new release. My personal favorites were On My Soul, Risk It All, and I Just Might. Album was reviewed on February 27th, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(1)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

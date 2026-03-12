@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>About</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+<section class="about-hero">
+
+<h1>About</h1>
+
+<p>A personal archive of album reviews and track-by-track scoring.</p>
+
+</section>
+
+<section class="about-container">
+
+<h1>About This Project</h1>
+
+<p>
+
+This website is a personal music review archive where albums are broken down by song and given individual ratings. In the spirit of the Morrison album reviews from 2022-23, I hope to respark the catalyst that brought my 3 roommates and I together and we became friends for life.
+<h2>Why I Built This Site</h2>
+
+<p>
+After listening to many albums over the years, I wanted a way to track my opinions in a structured way rather than just remembering favorites. The idea of this site has taken so many forms over the years, starting as marker written on the whiteboard in our college dorm's living room, morphing into pencil on sticky notes on my desk at work, and eventually to a digital interface with a shared Excel sheet being the biggest inspiration behind how this site works. Today, although it is just me, it serves as a full-service one-stop shop for everything in the world of music.
+</p>
+
+<p>
+Each album is broken down to the song and rated on a grading scale live for the most genuine first impression rankings. 
+</p>
+</p>
+<h2>Genres I Review</h2>
+
+<div class="genre-list">
+
+<span>Pop</span>
+<span>Rap</span>
+<span>Country</span>
+<span>Folk</span>
+<span>Alternative</span>
+<span>R&B</span>
+
+</div>
+
+<h2>Score System</h2>
+
+<div class="score-grid">
+
+<div class="score-box s">S (+5)<br><span>Exceptional, immediate add to playlsit, heavy on repeat</span></div>
+<div class="score-box a">A (+3)<br><span>Good, consider adding to playlist after a few listens</span></div>
+<div class="score-box b">B (+1)<br><span>Average, play/skip depending on vibe, not a playlist add</span></div>
+<div class="score-box c">C (+0)<br><span>Weak, skip on most occasions, but understandable if you like</span></div>
+<div class="score-box d">D (-1)<br><span>Poor, skip on every occasion unless requested by someone in the car/room</span></div>
+<div class="score-box f">F (-3)<br><span>Horrendous, immediate skip, call-out and I will give you weird looks if you enjoy</span></div>
+
+</div>
+
+<p>
+
+Scores are converted into a weighted system, point values shown above, that produces the final star rating shown on each review. It is possible to have a star rating below 0, but I am aware I tend to be nicer on the ratings leading to inflated scores that will likely never drop below 0.
+
+</p>
+<h2>Future Plans</h2>
+
+<p>
+As the library of reviews grows, the site will track top albums, recent additions, and provide a glimpse back to an album's first impressions as the songs grow on me. Eventually, I would like to build out a way to make this an actual site, allowing my friends to be able to view it and explore it on their own. I'd also like to look into adding other's ratings of albums to assemble our thoughts in the same place. I'd also like to have the personal goal of updating this site with each new album I review throughout 2026. Looking forward to the next releases I'm excited to dive into: The Way I Am by Luke Combs, The Great Divide by Noah Kahan, and With Heaven on Top by Zach Bryan.
+</p>
+</section>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

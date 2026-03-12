@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Top Albums</title>
+<link rel="stylesheet" href="style.css">
+<script src="albums.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+
+<header class="page-header">
+<h1>Top Rated Albums</h1>
+<p>Highest scoring albums reviewed</p>
+</header>
+
+
+<section class="podium-area">
+
+<div id="podium"></div>
+
+</section>
+
+
+<section class="honorable">
+
+<h2>Honorable Mentions</h2>
+
+<div id="honorableList" class="review-grid"></div>
+
+</section>
+
+
+<script>
+
+let sorted=[...albums].sort((a,b)=>b.score-a.score);
+
+let podium=document.getElementById("podium");
+
+let order=[1,0,2]; 
+// silver left, gold center, bronze right
+
+let medals=["🥇","🥈","🥉"];
+
+order.forEach((index,pos)=>{
+
+let album=sorted[index];
+
+let div=document.createElement("div");
+
+div.className="podium-slot";
+
+if(pos===1) div.classList.add("podium-first");
+
+div.innerHTML=`
+
+<a href="${album.link}">
+
+<img src="${album.cover}">
+
+<div class="medal">${medals[index]}</div>
+
+<div class="podium-score">${album.score} ★</div>
+
+<h3>${album.title}</h3>
+
+<p>${album.artist}</p>
+
+</a>
+
+`;
+
+podium.appendChild(div);
+
+});
+
+
+let honorable=document.getElementById("honorableList");
+
+// Only show the next two albums after the top 3
+for(let i=3; i<Math.min(5, sorted.length); i++){
+
+let album=sorted[i];
+
+let item=document.createElement("div");
+
+item.className="honorable-item";
+
+item.innerHTML=`
+
+<a href="${album.link}">
+${album.title} — ${album.artist} ⭐ ${album.score}
+</a>
+
+`;
+
+honorable.appendChild(item);
+
+}
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

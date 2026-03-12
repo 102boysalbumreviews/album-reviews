@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album6.jpg" class="review-cover">
+
+<div class="review-grade">3.2 ★</div>
+
+</div>
+
+</section>
+<h1>Man's Best Friend (Bonus Track)</h1>
+<p>by Sabrina Carpenter</p>
+
+<section class="album-meta"
+     data-review-date="2026-03-12"
+     data-track-count="13"
+     data-album-score="3.2">
+
+<p><strong>Tracks:</strong> 13</p>
+<p><strong>Released:</strong> December 24, 2025</p>
+<p><strong>Reviewed:</strong> March 12, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+
+<span>Manchild</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Tears</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>My Man on Willpower</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Sugar Talking</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>We Almost Broke Up Again Last Night</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>Nobody's Son</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Never Getting Laid</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>When Did You Get Hot?</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Go Go Juice</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>Don't Worry I'll Make You Worry</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>House Tour</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Goodbye</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Such A Funny Way</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+I have been a fan of a few Harry Styles songs, both singles and as a member of One Direction. When I first saw there was a new "non-skip" album released, I knew I had to dive right in. I was disappointed to say the least about these tracks. It felt as though literally every single one was missing something, whether it was a lyrical metaphor, a background track, or some stronger vocals. After this album, I would confidently say that Harry Styles is not my cup of tea, but that I can respect his fans that enjoy this genre of music. At best, I would only add some of these tracks to a playlist to tune out and play in the background. My personal favorite tracks off this album were the only 3 in the A tier; Carla's Song, Pop, and Are You Listening Yet?. Album was reviewed on March 11th, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(1)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

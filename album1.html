@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album1.jpg" class="review-cover">
+
+<div class="review-grade">4.2 ★</div>
+
+</div>
+
+</section>
+<h1>Cloud 9</h1>
+<p>by Megan Moroney</p>
+
+<section class="album-meta"
+     data-review-date="2026-02-24"
+     data-track-count="15"
+     data-album-score="4.2">
+
+<p><strong>Tracks:</strong> 15</p>
+<p><strong>Released:</strong> February 20, 2026</p>
+<p><strong>Reviewed:</strong> February 24, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+
+<span>Cloud 9</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Medicine</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>6 Months Later</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Stupid</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Beautiful Things</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Convincing</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Liars & Tigers & Bears</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>I Only Miss You (feat. Ed Sheeran)</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Wedding Dress</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Change of Heart</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Bells & Whistles (feat. Kacey Musgraves)</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>Table for Two</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>Wish I Didn't</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Who Hurt You?</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Waiting On the Rain</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+Cloud 9 by Megan Moroney takes an upbeat approach to how relationships end. The overarching theme of this album as being the prize at the end of the day and maintaining self-worth even during the midst of some of the lowest points in their lives, Megan Moroney seeks to inspire women in similar positions to the ones she sings about in this 15-song masterclass. This was the first album I have reviewed after taking a long break and my, my, my was it one to remember for it's own reasons. My personal favorite tracks off this album were Wedding Dress, Medicine, and Stupid. Album was reviewed on February 24th, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(1)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

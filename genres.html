@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Genres</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="nav-left">
+<a href="index.html" class="logo">Album Reviews</a>
+</div>
+
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="reviews.html">All Reviews</a>
+<a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+<a href="about.html">About</a>
+
+<div class="search-container">
+<input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+<div id="searchResults"></div>
+</div>
+
+</div>
+</nav>
+
+<header style="text-align:center;padding:40px;">
+<h1>Find Your Favorite Genre</h1>
+</header>
+
+
+<section class="genre-grid" id="genreGrid">
+<!-- genre buttons inserted here -->
+</section>
+
+
+<script src="albums.js"></script>
+<script src="search.js"></script>
+
+<script>
+
+const genres = [
+"Pop",
+"Rap",
+"Country",
+"Folk",
+"Alternative",
+"R&B"
+];
+
+const container = document.getElementById("genreGrid");
+
+genres.forEach(genre => {
+
+let albumsWithGenre = albums.filter(album =>
+album.genre.includes(genre)
+);
+
+let latest = null;
+
+if(albumsWithGenre.length > 0){
+
+albumsWithGenre.sort((a,b)=>
+new Date(b.reviewDate) - new Date(a.reviewDate)
+);
+
+latest = albumsWithGenre[0];
+
+}
+
+let card = document.createElement("a");
+
+card.href = "reviews.html?genre=" + encodeURIComponent(genre);
+
+card.className = "genre-card";
+
+card.innerHTML = `
+
+<div class="genre-cover">
+
+<img src="${latest ? latest.cover : 'placeholder.jpg'}">
+
+<div class="genre-overlay">${genre}</div>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+</script>
+</body>
+</html>

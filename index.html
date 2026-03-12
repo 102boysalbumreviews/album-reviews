@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Reviews</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+	<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+<header>
+<h1>Album Reviews</h1>
+<p>Reviewing from a slightly biased perspective trying to highlight how music makes you feel rather than how it sounds.</p>
+</header>
+
+<section class="intro">
+<p>Welcome to the brand-new top of the line music review site. Picking up with the same passion for new and old music as the run in 2023 Morrison, I'm back. Follow along for my thoughts, feelings and comments on the hottest new albums of 2026.</p>
+</section>
+
+<h2 class="section-title">Latest Reviews</h2>
+
+<div id="albumGrid" class="album-grid">
+<!-- Latest 3 albums will be inserted here by JS -->
+</div>
+
+<footer>
+<p>Album Reviews Site</p>
+</footer>
+
+
+<script src="albums.js"></script>
+<script src="search.js"></script>
+
+<script>
+// Wait until DOM is loaded
+document.addEventListener("DOMContentLoaded", function(){
+
+  // Sort by reviewDate descending and get the top 3
+  const latest3 = albums.sort((a,b) => new Date(b.reviewDate) - new Date(a.reviewDate)).slice(0,3);
+
+  const container = document.getElementById("albumGrid");
+
+  latest3.forEach(album => {
+    const card = document.createElement("a");
+    card.href = album.link;
+    card.className = "album-card";
+
+    card.innerHTML = `
+      <div class="cover-container">
+        <img src="${album.cover}" class="album-cover">
+        <div class="rating-overlay">${album.score} ★</div>
+      </div>
+      <h3>${album.artist}</h3>
+      <p>${album.title}</p>
+    `;
+
+    container.appendChild(card);
+  });
+
+});
+</script>
+
+</body>
+</html>
