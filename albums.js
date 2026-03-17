@@ -20,7 +20,7 @@ score: 3.22,
 tracks: 18,
 reviewDate: "2026-02-25",
 releaseDate: "2026-01-30",
-genre: ["Alternative", "Hip-Hop"],
+genre: ["Alternative", "Hip-Hop", "Rap"],
 link: "album2.html"
 },
 
@@ -32,7 +32,7 @@ score: 3.44,
 tracks: 18,
 reviewDate: "2026-02-26",
 releaseDate: "2020-03-06",
-genre: ["Hip-Hop"],
+genre: ["Hip-Hop", "Rap"],
 link: "album3.html"
 },
 
@@ -80,8 +80,31 @@ score: 3.23,
 tracks: 13,
 reviewDate: "2026-03-12",
 releaseDate: "2023-06-02",
-genre: ["Hip-Hop"],
+genre: ["Hip-Hop", "Rap"],
 link: "album7.html"
-}
+},
 
+{
+title: "forgive, forget. [EP]",
+artist: "Avery Anna",
+cover: "album8.jpg",
+score: 3.67,
+tracks: 6,
+reviewDate: "2026-03-17",
+releaseDate: "2026-03-13",
+genre: ["Country"],
+link: "album8.html"
+},
+
+{
+title: "MUSIC-SORRY 4 DA WAIT",
+artist: "Playboi Carti",
+cover: "album9.jpg",
+score: 1.82,
+tracks: 34,
+reviewDate: "2026-03-17",
+releaseDate: "2025-03-25",
+genre: ["Hip-Hop", "Trap", "Rap"],
+link: "album9.html"
+}
 ];
