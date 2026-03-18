@@ -106,5 +106,17 @@ reviewDate: "2026-03-17",
 releaseDate: "2025-03-25",
 genre: ["Hip-Hop", "Trap", "Rap"],
 link: "album9.html"
+},
+
+{
+title: "Lavender Days",
+artist: "Caamp",
+cover: "album10.jpg",
+score: 4.00,
+tracks: 12,
+reviewDate: "2026-03-18",
+releaseDate: "2022-06-24",
+genre: ["Folk", "Alternative"],
+link: "album10.html"
 }
 ];
