@@ -73,7 +73,7 @@ link: "album6.html"
 },
 
 {
-title: "METRO BOOMIN PRESENTS SPIDERM-MAN: ACROSS THE SPIDER-VERSE",
+title: "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE",
 artist: "Metro Boomin",
 cover: "album7.jpg",
 score: 3.23,
