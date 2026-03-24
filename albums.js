@@ -118,5 +118,17 @@ reviewDate: "2026-03-18",
 releaseDate: "2022-06-24",
 genre: ["Folk", "Alternative"],
 link: "album10.html"
+},
+
+{
+title: "The Way I Am",
+artist: "Luke Combs",
+cover: "album11.jpg",
+score: 4.36,
+tracks: 22,
+reviewDate: "2026-03-24",
+releaseDate: "2026-03-20",
+genre: ["Country"],
+link: "album11.html"
 }
 ];
