@@ -130,5 +130,29 @@ reviewDate: "2026-03-24",
 releaseDate: "2026-03-20",
 genre: ["Country"],
 link: "album11.html"
+},
+
+{
+title: "HIT ME HARD AND SOFT",
+artist: "Billie Eilish",
+cover: "album12.jpg",
+score: 4.60,
+tracks: 10,
+reviewDate: "2026-03-26",
+releaseDate: "2024-05-17",
+genre: ["Pop"],
+link: "album12.html"
+},
+
+{
+title: "Barbie The Album",
+artist: "Various Artists",
+cover: "album13.jpg",
+score: 3.41,
+tracks: 17,
+reviewDate: "2026-03-26",
+releaseDate: "2023-07-21",
+genre: ["Pop", "Folk", "Rock"],
+link: "album13.html"
 }
 ];
