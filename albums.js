@@ -154,5 +154,29 @@ reviewDate: "2026-03-26",
 releaseDate: "2023-07-21",
 genre: ["Pop", "Folk", "Rock"],
 link: "album13.html"
+},
+
+{
+title: "Work of Heart",
+artist: "Flatland Cavalry",
+cover: "album14.jpg",
+score: 4.17,
+tracks: 12,
+reviewDate: "2026-03-31",
+releaseDate: "2026-03-27",
+genre: ["Folk", "Country"],
+link: "album14.html"
+},
+
+{
+title: "BULLY",
+artist: "Kanye West",
+cover: "album15.jpg",
+score: 2.06,
+tracks: 18,
+reviewDate: "2026-03-31",
+releaseDate: "2026-03-28",
+genre: ["Hip Hop", "Rap"],
+link: "album15.html"
 }
 ];
