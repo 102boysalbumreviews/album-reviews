@@ -190,5 +190,17 @@ reviewDate: "2026-04-07T00:00:00",
 releaseDate: "2026-04-03T00:00:00",
 genre: ["Folk", "Country"],
 link: "album16.html"
+},
+
+{
+title: "Dandelion",
+artist: "Ella Langley",
+cover: "album17.jpg",
+score: 3.78,
+tracks: 18,
+reviewDate: "2026-04-13T00:00:00",
+releaseDate: "2026-10-T00:00:00",
+genre: ["Pop", "Country"],
+link: "album17.html"
 }
 ];
