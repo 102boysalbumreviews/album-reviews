@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album18.jpg" class="review-cover">
+
+<div class="review-grade">2.69 ★</div>
+
+</div>
+
+</section>
+<h1>CTRL ESCAPE</h1>
+<p>by John Summit</p>
+
+<section class="album-meta"
+     data-review-date="2026-04-15"
+     data-track-count="13"
+     data-album-score="2.69">
+
+<p><strong>Tracks:</strong> 13</p>
+<p><strong>Released:</strong> April 15, 2026</p>
+<p><strong>Reviewed:</strong> April 15, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+
+<span>STATUS:AWAY</span>
+
+<div class="bar">
+<div class="fill" data-grade="C"></div>
+</div>
+
+<span class="grade">C</span>
+
+</div>
+
+<div class="track">
+<span>SHADES OF BLUE (feat. Devault, Julia Church)</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>SATA (feat. Rohaan)</span>
+
+<div class="bar">
+<div class="fill" data-grade="C"></div>
+</div>
+
+<span class="grade">C</span>
+
+</div>
+
+<div class="track">
+<span>WITH ME (feat. Julia Wolf)</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>DON'T BELIEVE IT (feat. Absolutely)</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>LIGHTS GO OUT</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>MESS W/ ME (feat. Nija)</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>CHICA 305 (feat. Feid)</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>ALL THE TIME (feat. The Chainsmokers, Ilsey)</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>OOO</span>
+
+<div class="bar">
+<div class="fill" data-grade="D"></div>
+</div>
+
+<span class="grade">D</span>
+
+</div>
+
+<div class="track">
+<span>SHADOWS (feat. LAVINIA)</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>TIME WITH YOU (feat. KILIMANJARO)</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>CYANIDE (feat. Absolutely)</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+I like some EDM songs, but I would say they are generally not my favorite. I thought the tax-day release was a fun mixture of genres, languages, etc. I especially love the album theme of escaping the workplace and having new experiences after my girlfriend told me he is CPA certified and the album title and a few song titles are plays on words commonly found on in-office status updates. I could see some of these tracks absolutely hitting if I was surrounded by a crowd of people also into it, but during this first listen, the energy was not what I was looking for. My personal favorites from this album were LIGHTS GO OUT, SHADOWS, and MESS W/ ME. Album was reviewed on April 15th, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(2)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

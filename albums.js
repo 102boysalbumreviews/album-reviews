@@ -202,5 +202,17 @@ reviewDate: "2026-04-13T00:00:00",
 releaseDate: "2026-10-T00:00:00",
 genre: ["Pop", "Country"],
 link: "album17.html"
+},
+
+{
+title: "CTRL ESCAPE",
+artist: "John Summit",
+cover: "album18.jpg",
+score: 2.69,
+tracks: 13,
+reviewDate: "2026-04-15T00:00:00",
+releaseDate: "2026-04-15T00:00:00",
+genre: ["Dance", "Electronic", "EDM"],
+link: "album18.html"
 }
 ];
