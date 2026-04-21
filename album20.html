@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album20.jpg" class="review-cover">
+
+<div class="review-grade">4.60 ★</div>
+
+</div>
+
+</section>
+<h1>Deep Water [EP]</h1>
+<p>by Cameron Whitcomb</p>
+
+<section class="album-meta"
+     data-review-date="2026-04-21"
+     data-track-count="5"
+     data-album-score="4.60">
+
+<p><strong>Tracks:</strong> 6</p>
+<p><strong>Released:</strong> April 17, 2026</p>
+<p><strong>Reviewed:</strong> April 21, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+
+<span>Deep Water</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Sounds Like Heaven</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>You and Me</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>Kingdom of Fear</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>Crying on the Inside</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+This EP will rank among the top albums, but needs to have an asterisk by it because of the number of tracks in this limited release. That's not to take away from the fact that all of these songs are so good and it is very deserving of the rating. Whitcomb attacks each of his songs with an energy that is unmatched and feels like it makes your heart beat for you. Over the past 6 months, he has rapidly ascended my list of favorite artists mostly because of how much I enjoyed his late 2025 album release "The Hard Way". This small taste of a project still makes me want more from him. I highly recommend listening through this EP if you have 15min to give him a try and you've never heard of him before. You're damn sure I Googled his concert venues for 2026 and am strongly considering getting my girlfriend and I tickets to his local show with special guest Dylan Conrique, whom my friends and I have also recently discovered... My personal favorites were Kingdom of Fear and Deep Water. Album was reviewed on April 21st, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(2)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

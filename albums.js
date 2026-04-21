@@ -214,5 +214,29 @@ reviewDate: "2026-04-15T00:00:00",
 releaseDate: "2026-04-15T00:00:00",
 genre: ["Dance", "Electronic", "EDM"],
 link: "album18.html"
+},
+
+{
+title: "With Heaven On Top",
+artist: "Zach Bryan",
+cover: "album19.jpg",
+score: 3.40,
+tracks: 25,
+reviewDate: "2026-04-21T00:00:00",
+releaseDate: "2026-01-09T00:00:00",
+genre: ["Country", "Folk"],
+link: "album19.html"
+},
+
+{
+title: "Deep Water [EP]",
+artist: "Cameron Whitcomb",
+cover: "album20.jpg",
+score: 4.60,
+tracks: 5,
+reviewDate: "2026-04-21T00:00:00",
+releaseDate: "2026-04-17T00:00:00",
+genre: ["Alternative", "Country"],
+link: "album20.html"
 }
 ];
