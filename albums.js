@@ -238,5 +238,17 @@ reviewDate: "2026-04-21T00:00:00",
 releaseDate: "2026-04-17T00:00:00",
 genre: ["Alternative", "Country"],
 link: "album20.html"
+},
+
+{
+title: "The Great Divide",
+artist: "Noah Kahan",
+cover: "album21.jpg",
+score: 5.00,
+tracks: 17,
+reviewDate: "2026-04-24T00:00:00",
+releaseDate: "2026-04-24T00:00:00",
+genre: ["Alternative", "Folk"],
+link: "album21.html"
 }
 ];
