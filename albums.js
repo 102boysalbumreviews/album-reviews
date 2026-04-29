@@ -250,5 +250,17 @@ reviewDate: "2026-04-24T00:00:00",
 releaseDate: "2026-04-24T00:00:00",
 genre: ["Alternative", "Folk"],
 link: "album21.html"
+},
+
+{
+title: "THIS MUSIC MAY CONTAIN HOPE.",
+artist: "RAYE",
+cover: "album22.jpg",
+score: 2.94,
+tracks: 17,
+reviewDate: "2026-04-29T00:00:00",
+releaseDate: "2026-03-27T00:00:00",
+genre: ["R&B", "Soul"],
+link: "album22.html"
 }
 ];
