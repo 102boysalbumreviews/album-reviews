@@ -241,7 +241,7 @@ link: "album20.html"
 },
 
 {
-title: "The Great Divide",
+title: "The Great Divide: The Last Of The Bugs",
 artist: "Noah Kahan",
 cover: "album21.jpg",
 score: 5.00,
