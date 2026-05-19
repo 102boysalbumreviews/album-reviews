@@ -262,5 +262,41 @@ reviewDate: "2026-04-29T00:00:00",
 releaseDate: "2026-03-27T00:00:00",
 genre: ["R&B", "Soul"],
 link: "album22.html"
+},
+
+{
+title: "ICEMAN",
+artist: "Drake",
+cover: "album23.jpg",
+score: 2.72,
+tracks: 18,
+reviewDate: "2026-05-15T00:00:00",
+releaseDate: "2026-05-15T00:00:00",
+genre: ["Hip-Hop", "Rap"],
+link: "album23.html"
+},
+
+{
+title: "HABITI",
+artist: "Drake",
+cover: "album24.jpg",
+score: 1.36,
+tracks: 11,
+reviewDate: "2026-05-17T00:00:00",
+releaseDate: "2026-05-15T00:00:00",
+genre: ["R&B", "Soul"],
+link: "album24.html"
+},
+
+{
+title: "MAID OF HONOUR",
+artist: "Drake",
+cover: "album25.jpg",
+score: 2.93,
+tracks: 14,
+reviewDate: "2026-05-17T00:00:00",
+releaseDate: "2026-05-15T00:00:00",
+genre: ["Dance", "Rap"],
+link: "album25.html"
 }
 ];
