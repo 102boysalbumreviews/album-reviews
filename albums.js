@@ -298,5 +298,29 @@ reviewDate: "2026-05-17T00:00:00",
 releaseDate: "2026-05-15T00:00:00",
 genre: ["Dance", "Rap"],
 link: "album25.html"
+},
+
+{
+title: "Middle of Nowhere",
+artist: "Kacey Musgraves",
+cover: "album26.jpg",
+score: 3.77,
+tracks: 13,
+reviewDate: "2026-05-02T00:00:00",
+releaseDate: "2026-05-01T00:00:00",
+genre: ["Country"],
+link: "album26.html"
+},
+
+{
+title: "blog era boyz",
+artist: "mgk & Wiz Khalifa",
+cover: "album27.jpg",
+score: 2.89,
+tracks: 9,
+reviewDate: "2026-06-02T00:00:00",
+releaseDate: "2026-05-22T00:00:00",
+genre: ["Hip-Hop", "Rap"],
+link: "album27.html"
 }
 ];
