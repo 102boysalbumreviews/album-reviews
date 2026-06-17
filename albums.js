@@ -318,9 +318,45 @@ artist: "mgk & Wiz Khalifa",
 cover: "album27.jpg",
 score: 2.89,
 tracks: 9,
-reviewDate: "2026-06-02T00:00:00",
+reviewDate: "2026-06-04T00:00:00",
 releaseDate: "2026-05-22T00:00:00",
 genre: ["Hip-Hop", "Rap"],
 link: "album27.html"
+},
+
+{
+title: "Dinner Party",
+artist: "Niall Horan",
+cover: "album28.jpg",
+score: 3.33,
+tracks: 12,
+reviewDate: "2026-06-16T00:00:00",
+releaseDate: "2026-06-05T00:00:00",
+genre: ["Pop"],
+link: "album28.html"
+},
+
+{
+title: "you seem pretty sad for a girl so in love",
+artist: "Olivia Rodrigo",
+cover: "album29.jpg",
+score: 3.69,
+tracks: 13,
+reviewDate: "2026-06-16T00:00:00",
+releaseDate: "2026-06-12T00:00:00",
+genre: ["Indie", "Pop"],
+link: "album29.html"
+},
+
+{
+title: "DIRTY BLONDE",
+artist: "Bebe Rexha",
+cover: "album30.jpg",
+score: 2.69,
+tracks: 13,
+reviewDate: "2026-06-16T00:00:00",
+releaseDate: "2026-06-12T00:00:00",
+genre: ["Dance", "Pop"],
+link: "album30.html"
 }
 ];

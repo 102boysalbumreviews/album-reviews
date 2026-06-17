@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album Review</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+  <div class="nav-left">
+    <a href="index.html" class="logo">Album Reviews</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="reviews.html">All Reviews</a>
+    <a href="topalbums.html">Top Albums</a>
+<a href="genres.html">Genres</a>
+    <a href="about.html">About</a>
+
+    <div class="search-container">
+      <input type="text" id="siteSearch" placeholder="Search albums or artists..." autocomplete="off">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+</nav>
+
+
+<header>
+<section class="album-hero">
+
+<div class="album-cover-box">
+
+<img src="album29.jpg" class="review-cover">
+
+<div class="review-grade">3.69 ★</div>
+
+</div>
+
+</section>
+<h1>you seem pretty sad for a girl so in love</h1>
+<p>by Olivia Rodrigo</p>
+
+<section class="album-meta"
+     data-review-date="2026-06-16"
+     data-track-count="13"
+     data-album-score="3.69">
+
+<p><strong>Tracks:</strong> 13</p>
+<p><strong>Released:</strong> June 12, 2026</p>
+<p><strong>Reviewed:</strong> June 16, 2026</p>
+
+</section>
+</header>
+
+<section style="text-align:center;padding:30px;">
+
+<h2>Album Score</h2>
+
+<div id="starScore" style="font-size:60px;">Calculating...</div>
+
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Track Ratings</h2>
+
+<div class="track">
+<span>drop dead</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>stupid song</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>honeybee</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>maggots for brains</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>u + me = "<"3</span>
+
+<div class="bar">
+<div class="fill" data-grade="B"></div>
+</div>
+
+<span class="grade">B</span>
+
+</div>
+
+<div class="track">
+<span>my way</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>purple</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>the cure</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>begged</span>
+
+<div class="bar">
+<div class="fill" data-grade="A"></div>
+</div>
+
+<span class="grade">A</span>
+
+</div>
+
+<div class="track">
+<span>what's wrong with me (feat. Robert Smith)</span>
+
+<div class="bar">
+<div class="fill" data-grade="C"></div>
+</div>
+
+<span class="grade">C</span>
+
+</div>
+
+<div class="track">
+<span>less</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>expectations</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+
+<div class="track">
+<span>cigarette smoke</span>
+
+<div class="bar">
+<div class="fill" data-grade="S"></div>
+</div>
+
+<span class="grade">S</span>
+
+</div>
+</section>
+
+<section style="max-width:700px;margin:auto;padding:20px;">
+<h2>Review</h2>
+
+<p>
+This is just a continuation onto Olivia Rodrigo's past projects like SOUR and GUTS. This album is like a an athlete practicing their sport. Just polishing what made her past ones so amazing and even still improving. I do like how the first half of the album was all about the feelings of having a new crush, and the second half is how that develops into a realization that a relationship is toxic and is better to be over than endured. This sort of consistent emotion is exactly what makes listening to albums front to back so fascinating at the stories artists can tell over a 50 minute album, made of roughly 3 minute chapters as each song. Some of the tracks felt a bit too "out there" and repetitive, which is why this project is receiving such high praise, yet does not even have over 4 rating stars. My personal favorites off this album were my way, drop dead, and the cure. Album was reviewed on June 16th, 2026.
+</p>
+
+</section>
+
+<div style="text-align:center;padding:40px;">
+<a href="index.html">← Back to Main Page</a>
+</div>
+
+<script>
+
+const weights={
+S:5,
+A:3,
+B:1,
+C:0,
+D:-1,
+F:-3
+};
+
+const barScale={
+S:100,
+A:80,
+B:60,
+C:40,
+D:20,
+F:0
+};
+
+let fills=document.querySelectorAll(".fill");
+
+let total=0;
+let count=0;
+
+fills.forEach(bar=>{
+
+let grade=bar.dataset.grade;
+
+let weight=weights[grade];
+
+total+=weight;
+count++;
+
+let percent=barScale[grade];
+
+setTimeout(()=>{
+bar.style.width=percent+"%";
+},200);
+
+});
+let avg=total/count;
+
+let stars=avg;
+
+document.getElementById("starScore").innerHTML=stars.toFixed(2)+" ★";
+
+</script>
+<script src="albums.js"></script>
+<script src="search.js"></script>
+</body>
+</html>
