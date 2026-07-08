@@ -358,5 +358,29 @@ reviewDate: "2026-06-16T00:00:00",
 releaseDate: "2026-06-12T00:00:00",
 genre: ["Dance", "Pop"],
 link: "album30.html"
+},
+
+{
+title: "what about now! [EP]",
+artist: "Chesle",
+cover: "album31.jpg",
+score: 4.00,
+tracks: 6,
+reviewDate: "2026-06-23T00:00:00",
+releaseDate: "2026-06-19T00:00:00",
+genre: ["Hip-Hop"],
+link: "album31.html"
+},
+
+{
+title: "Banks Of The Trinity",
+artist: "Cody Johnson",
+cover: "album32.jpg",
+score: 4.13,
+tracks: 16,
+reviewDate: "2026-06-26T00:00:00",
+releaseDate: "2026-07-07T00:00:00",
+genre: ["Country"],
+link: "album32.html"
 }
 ];
