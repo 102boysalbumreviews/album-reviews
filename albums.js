@@ -382,5 +382,29 @@ reviewDate: "2026-06-26T00:00:00",
 releaseDate: "2026-07-07T00:00:00",
 genre: ["Country"],
 link: "album32.html"
+},
+
+{
+title: "The Real Me",
+artist: "Future",
+cover: "album33.jpg",
+score: 2.00,
+tracks: 22,
+reviewDate: "2026-07-14T00:00:00",
+releaseDate: "2026-07-10T00:00:00",
+genre: ["Rap", "Trap", "Hip-Hop"],
+link: "album33.html"
+},
+
+{
+title: "luck... or something",
+artist: "Hilary Duff",
+cover: "album34.jpg",
+score: 3.36,
+tracks: 11,
+reviewDate: "2026-07-14T00:00:00",
+releaseDate: "2026-02-20T00:00:00",
+genre: ["Pop"],
+link: "album34.html"
 }
 ];
